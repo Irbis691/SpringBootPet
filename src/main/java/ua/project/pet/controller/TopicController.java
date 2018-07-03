@@ -9,6 +9,7 @@ import ua.project.pet.service.TopicService;
 import java.util.List;
 
 @RestController
+@Loggable
 public class TopicController {
 
 	@Autowired
@@ -25,7 +26,6 @@ public class TopicController {
 	}
 
 	@RequestMapping(value = "/topics", method = RequestMethod.POST)
-	@Loggable
 	public void addTopic(@RequestBody Topic topic) {
 		topicService.addTopic(topic);
 	}
